@@ -1,0 +1,1 @@
+console.log(process.env.USER + " says: " + process.argv[2]);
