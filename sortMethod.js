@@ -10,8 +10,8 @@ console.log(oneDigictNumbers);
 //Exampler 2
 const moreThanOneDigictNumbers = [33,157,56,2,413,64];
 
-//This sorting way will not sort the number correctly in this way: moreThanOneDigictNumbers.sort(); -> It will only consider the first digit and return something like this [157,2,33,413,56,64]
-//This this the way to fix that:
+//This sorting way will not sort the number correctly if the array contains number with more than one digit: moreThanOneDigictNumbers.sort(); -> It will only consider the first digit and return something like this [157,2,33,413,56,64]
+//This is the way to fix that:
 moreThanOneDigictNumbers.sort((a,b) => a - b); //This is for ascending order
 //The next one will be for for descending order: 
 //moreThanOneDigictNumbers.sort((a,b) => b - a);
@@ -41,7 +41,7 @@ const parksCapitalAndLowCaseLetters =[
     "badlands"
 ];
 
-//This sorting won't work properly if the names are capital and lower case letters in the same array. Capital letters will be first and lower case letters will be aftere them: parksCapitalAndLowCaseLetters.sort();
+//This sorting won't work properly if the names are capital and lower case letters in the same array. Capital letters will be first and lower case letters will be after if we use this way: parksCapitalAndLowCaseLetters.sort();
 //To solved this limitation we will need to include an arrow funtion to sort the elements correctly
 parksCapitalAndLowCaseLetters.sort((parkA, parkB) => parkA.toLocaleLowerCase() < parkB.toLocaleLowerCase() ? -1 : 1); //This is from a to z
 //The next one will be to sort from z to a
