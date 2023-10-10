@@ -46,3 +46,5 @@ function getBigParkNames(parks, minSize) {
 }
 
 console.log(getBigParkNames(parks,2000));
+
+console.log(typeof {});
